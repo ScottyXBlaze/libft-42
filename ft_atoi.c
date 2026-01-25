@@ -6,7 +6,7 @@
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 08:25:28 by username          #+#    #+#             */
-/*   Updated: 2026/01/21 08:31:13 by username         ###   ########.fr       */
+/*   Updated: 2026/01/24 23:18:10 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	while (str[i] == 32 || (9 <= str[i] && str[i] <= 13))
 		i++;
-	while (str[i] == '+' && str[i + 1] != '-')
+	if (str[i] == '+' && str[i + 1] != '-')
 		i++;
 	if (str[i] == '-')
 	{

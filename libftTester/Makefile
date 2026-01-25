@@ -26,13 +26,10 @@ $(MANDATORY): %: mandatory_start
 $(VSOPEN): vs%:
 	@code $(TESTS_PATH)ft_$*_test.cpp
 
-mandatory_start: update message
+mandatory_start: message
 	@tput setaf 6
 	make -C $(LIBFT_PATH)
 	@tput setaf 4 && echo [Tests]
-
-update:
-	@git pull
 
 message: checkmakefile
 	@tput setaf 3 && echo "If all your tests are OK and the moulinette KO you, please run the tester with valgrind (see README)"
