@@ -11,15 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-static int int_len(long nbr);
-static char *pre_conv(int len);
 
-char *ft_itoa(int n)
+static int	int_len(long nbr);
+static char	*pre_conv(int len);
+
+char	*ft_itoa(int n)
 {
-	int len;
-	int i;
-	char *result;
-	long nbr;
+	int		len;
+	int		i;
+	char	*result;
+	long	nbr;
 
 	nbr = n;
 	len = int_len(nbr);
@@ -41,10 +42,10 @@ char *ft_itoa(int n)
 	return (result);
 }
 
-static char *pre_conv(int len)
+static char	*pre_conv(int len)
 {
-	char *ptr;
-	
+	char	*ptr;
+
 	ptr = malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
@@ -52,10 +53,10 @@ static char *pre_conv(int len)
 	return (ptr);
 }
 
-static int int_len(long nbr)
+static int	int_len(long nbr)
 {
-	int lengh;
-	
+	int	lengh;
+
 	lengh = 0;
 	if (nbr < 0)
 		lengh++;
@@ -70,46 +71,3 @@ static int int_len(long nbr)
 	}
 	return (lengh);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-
-// Prototype de votre fonction
-char *ft_itoa(int n);
-
-void test_itoa(int n, const char *expected)
-{
-    char *result = ft_itoa(n);
-    
-    if (result && strcmp(result, expected) == 0)
-    {
-        printf("[✅ PASS] Input: %11d | Expected: %s | Result: %s\n", n, expected, result);
-    }
-    else
-    {
-        printf("[❌ FAIL] Input: %11d | Expected: %s | Result: %s\n", n, expected, result ? result : "NULL");
-    }
-    free(result);
-}
-
-int main(void)
-{
-    printf("--- Tests ft_itoa ---\n");
-
-    // Cas classiques
-    test_itoa(0, "0");
-    test_itoa(7, "7");
-    test_itoa(-7, "-7");
-    test_itoa(1234, "1234");
-    test_itoa(-1234, "-1234");
-
-    // Limites de l'int (Attention au dépassement !)
-    test_itoa(2147483647, "2147483647");
-    test_itoa(-2147483648, "-2147483648"); // Le fameux INT_MIN
-
-    printf("--- Fin des tests ---\n");
-    return (0);
-}
-*/

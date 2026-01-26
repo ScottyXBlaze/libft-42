@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-static int to_trim(const char *set, char c);
-static char *new_str(const char *s1, size_t start, size_t end);
+static int	to_trim(const char *set, char c);
+static char	*new_str(const char *s1, size_t start, size_t end);
 
-char *ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	if (ft_strlen(s1) == 0)
@@ -31,11 +31,11 @@ char *ft_strtrim(const char *s1, const char *set)
 	return (new_str(s1, i, j - (i - 1)));
 }
 
-static char *new_str(const char *s1, size_t start, size_t len)
+static char	*new_str(const char *s1, size_t start, size_t len)
 {
-	char *str;
-	size_t i;
-	
+	char	*str;
+	size_t	i;
+
 	if (len <= 0 || start >= ft_strlen(s1))
 		return (ft_strdup(""));
 	str = ft_calloc(len + 1, sizeof(char));
@@ -50,10 +50,10 @@ static char *new_str(const char *s1, size_t start, size_t len)
 	return (str);
 }
 
-static int to_trim(const char *set, char c)
+static int	to_trim(const char *set, char c)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (set[i])
 	{
