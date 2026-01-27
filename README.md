@@ -1,6 +1,6 @@
-*This project has been created as part of the 42 curriculum by nyramana*
+*This project has been created as part of the 42 curriculum by nyramana.*
 
-# libft
+# Libft
 
 ## **Description:**
 
@@ -9,10 +9,31 @@ This project is a library of functions that are used in the 42 curriculum. It re
 ## **Instructions:**
 
 ### **Compilation:**
-To compile the project, you need to use the Makefile provided in the repository. Just type `make` in the root repository and it will create the `libft.a`. Just by doing that, you will have a static library that you can use in your project.
+To compile the project, you need to use the Makefile provided in the repository. Just type `make` in the root repository and it will create the `libft.a`. By doing that, you will have a static library that you can use in your project.
 
+## **Example:** 
+**Simple usage:** 
+```
+.
+├── libft.h         # Header
+├── libft.a         # Library
+└── project.c          # Your program
+```
+```c
+#include "libft.h"
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    int integer;
+
+    integer = ft_atoi("   +833783");
+    printf("%d\n", integer); // Output: 833783
+    return (0);
+}
+```
 ### Usage: 
-to use the library, you need to include the header file `libft.h` in your project. Then compile your project with the library using the following command:
+To use the library, you need to include the header file `libft.h` in your project. Then compile your project with the library using the following command:
 
 **Warning:** *Make sure to have the `libft.a` and `libft.h` files in the same directory as your project to make the compilation easier*
 
@@ -22,19 +43,7 @@ gcc -o  project project.c -L. -lft
 gcc project.c libft.a -o project
 ```
 
-## **Example:** 
-```c
-#include "libft.h"
 
-int main(int argc, char **argv)
-{
-    int integer;
-
-    integer = ft_atoi("   +833783");
-    printf("%d", integer);
-    return (0);
-}
-```
 ## **Functions:**
 
 *remember to add the `ft_` prefix before the name.* 
@@ -53,8 +62,9 @@ int main(int argc, char **argv)
 ## **Resources:** 
 
 ### references
-* The libft subject given by 42 
-* `man` pages
+* The libft subject given by 42.
+* `man` pages.
+* Youtube playlist like [linked list](https://youtube.com/playlist?list=PLBlnK6fEyqRi3-lvwLGzcaquOs5OBTCww&si=xiVstZLwszN4652O) or  [pointer](https://youtube.com/playlist?list=PLBlnK6fEyqRgZQ079Wa5H8D1oa43HGRQb&si=OOZIT1QzGjpywx_F) by Neso Academy.
 
 ### AI Usage
 
