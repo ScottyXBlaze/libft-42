@@ -1,87 +1,65 @@
 *This project has been created as part of the 42 curriculum by nyramana*
 
-# Libft:
+# libft
 
 ## **Description:**
-The Libft is a custom library that contains a variety of functions that will be useful in the 42 school. The goal is to recreate a set of function in the library `libc.h` and other utility function that we can use
 
-## **Compilation:**
-The easiest way to compile the library is to use the `make` command in the root directory of the project. This will generate the `libft.a` file in the root directory
+This project is a library of functions that are used in the 42 curriculum. It reimplement a set of functions from the C library like string manipulation, memory management and structure especially linked list.
 
-## **Usage:**
-To use the library in your project, simply add the `libft.a` file to your project and include the `libft.h` header file in your source files. Then your can compile your program using:
+## **Instructions:**
+
+### **Compilation:**
+To compile the project, you need to use the Makefile provided in the repository. Just type `make` in the root repository and it will create the `libft.a`. Just by doing that, you will have a static library that you can use in your project.
+
+### Usage: 
+to use the library, you need to include the header file `libft.h` in your project. Then compile your project with the library using the following command:
+
+**Warning:** *Make sure to have the `libft.a` and `libft.h` files in the same directory as your project to make the compilation easier*
+
 ```bash
-gcc main.c libft.a
-```
-you can also use this command:
-
-```bash
-gcc main.c -L. -lft
+gcc -o  project project.c -L. -lft
+# You can also use the following command to compile your program
+gcc project.c libft.a -o project
 ```
 
+## **Example:** 
+```c
+#include "libft.h"
+
+int main(int argc, char **argv)
+{
+    int integer;
+
+    integer = ft_atoi("   +833783");
+    printf("%d", integer);
+    return (0);
+}
+```
 ## **Functions:**
-Part 1:
 
-| Function | Description |
-| -------------- | --------------- |
-| ft_isalpa | check is the character is an alphabet|
-| ft_isdigit | check is the character is a digit|
-| ft_isalnum | check is the character is an alphabet or digit|
-| ft_isascii | check is the character is an ascii|
-| ft_isprint | check is the character is printable|
-| ft_strlen | return the length of the string|
-| ft_memset | fill a block of memory with a specific value|
-| ft_bzero | fill a block of memory with zeros|
-| ft_memcpy | copy a block of memory to another block of memory|
-| ft_memmove | copy a block of memory to another block of memory without overwriting the destination|
-| ft_strlcpy | copy a string to another string|
-| ft_strlcat | append a string to another string|
-| ft_toupper | convert a lowercase letter to uppercase|
-| ft_tolower | convert an uppercase letter to lowercase|
-| ft_strchr | find the first occurrence of a character in a string|
-| ft_strrchr | find the last occurrence of a character in a string|
-| ft_strncmp | compare two strings|
-| ft_memchr | find the first occurrence of a byte in a block of memory|
-| ft_memcmp | compare two blocks of memory|
-| ft_strnstr | find the first occurrence of a substring in a string|
-| ft_atoi | convert a string to an integer|
-| ft_calloc | allocate a block of memory and initialize it to zero|
-| ft_strdup | duplicate a string|
+*remember to add the `ft_` prefix before the name.* 
 
 
-Part 2:
+| Categories | Functions | Description |
+| :--- | :--- | :--- |
+| **Memory** | `memset`, `bzero`, `memcpy`, `memmove`, `memchr`, `memcmp`, `calloc` | Set and manipulate memory. |
+| **Character** | `isalpha`, `isdigit`, `isalnum`, `isascii`, `isprint`, `toupper`, `tolower` | Test et convert individual characters (ASCII). |
+| **String** | `strlen`, `strlcpy`, `strlcat`, `strchr`, `strrchr`, `strncmp`, `strnstr`, `strdup` | Standards function to manipulate strings. |
+| **Transformation** | `substr`, `strjoin`, `strtrim`, `split`, `itoa`, `atoi`, `strmapi` | Advanced Function to cut, join or convert data. |
+| **Input/Output** | `putchar_fd`, `putstr_fd`, `putendl_fd`, `putnbr_fd` | Simplified writing to file descriptors (`fd`). |
+| **Lists** | `lstnew`, `lstadd_front`, `lstsize`, `lstlast`, `lstadd_back`, `lstdelone`... | Management of linked list data structures|
 
-| Function | Description |
-| -------------- | --------------- |
-| ft_substr | get a substring from a string|
-| ft_strjoin | join two strings|
-| ft_strtrim | trim whitespace from the beginning and end of a string|
-| ft_split | split a string into an array of strings|
-| ft_itoa | convert an integer to a string|
-| ft_strmapi | apply a function to each character of a string and return a new string|
-| ft_striteri | apply a function to each character of a string|
-| ft_putchar_fd | write a character to a file descriptor|
-| ft_putstr_fd | write a string to a file descriptor|
-| ft_putendl_fd | write a string followed by a newline to a file descriptor|
-| ft_putnbr_fd | write a number to a file descriptor|
 
-Part 3:
+## **Resources:** 
 
-| Function | Description |
-| -------------- | --------------- |
-| ft_lstnew | create a new node|
-| ft_lstadd_front | add a new node to the beginning of a list|
-| ft_lstsize | get the size of a list|
-| ft_lstlast | get the last node of a list|
-| ft_lstadd_back | add a new node to the end of a list|
-| ft_lstdelone | delete a node from a list|
-| ft_lstclear | delete all nodes from a list|
-| ft_lstiter | apply a function to each node of a list|
-| ft_lstmap | apply a function to each node of a list and return a new list|
-<details>
-<summary><b>Gestion de la Mémoire</b></summary>
+### references
+* The libft subject given by 42 
+* `man` pages
 
-- `ft_memset` : Remplit la mémoire avec un octet constant.
-- `ft_bzero` : Met à zéro une zone mémoire.
-- `ft_calloc` : Alloue et initialise la mémoire.
-</details>
+### AI Usage
+
+IA was used to create a program to test all the subject (before I found the libftTester by Tripouille) and help with the README. In some case like the strlcat, AI helps me to understand what the function do and their limitation.
+
+
+### Test
+This Project was tested by [Libfttester](https://github.com/Tripouille/libftTester/) originally created by Tripouille to test this project and everything was OK.
