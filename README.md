@@ -9,7 +9,18 @@ This project is a library of functions that are used in the 42 curriculum. It re
 ## **Instructions:**
 
 ### **Compilation:**
-To compile the project, you need to use the Makefile provided in the repository. Just type `make` in the root repository and it will create the `libft.a`. By doing that, you will have a static library that you can use in your project.
+To compile the project, you need to use the Makefile provided in the repository. Just type in the root repository and it will create the `libft.a`.
+```bash
+make
+```
+By doing that, you will have a static library that you can use in your project.
+
+**Other make command:**
+```bash
+make clean # To remove every .o file
+make fclean # use make clean and remove the `libft.a`
+make re # Recompile the library
+```
 
 ## **Example:** 
 **Simple usage:** 
@@ -66,10 +77,14 @@ gcc project.c libft.a -o project
 * `man` pages.
 * Youtube playlist like [linked list](https://youtube.com/playlist?list=PLBlnK6fEyqRi3-lvwLGzcaquOs5OBTCww&si=xiVstZLwszN4652O) or  [pointer](https://youtube.com/playlist?list=PLBlnK6fEyqRgZQ079Wa5H8D1oa43HGRQb&si=OOZIT1QzGjpywx_F) by Neso Academy.
 
-### AI Usage
-
-IA was used to create a program to test all the subject (before I found the libftTester by Tripouille) and help with the README. In some case like the strlcat, AI helps me to understand what the function do and their limitation.
 
 
-### Test
-This Project was tested by [Libfttester](https://github.com/Tripouille/libftTester/) originally created by Tripouille to test this project and everything was OK.
+## **Verification & Testing**
+
+### Automated Testing
+This project has been tested using community-standard tools to ensure compatibility with the subject requirements:
+* **[Libfttester](https://github.com/Tripouille/libftTester/):** All tests passed.
+
+### Development Process
+* **Documentation:** AI was used as a learning assistant to clarify complex `man` pages (especially `strlcat` and `strlcpy`) and to help structure this documentation.
+* **Manual Testing:** Custom main functions were created to test memory edge cases and linked list pointers.
