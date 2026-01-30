@@ -1,13 +1,13 @@
 /* ************************************************************************** */
-/*																			  */
-/*														  :::	   ::::::::   */
-/*	 ft_strjoin.c										:+:		 :+:	:+:   */
-/*													  +:+ +:+		  +:+	  */
-/*	 By: username <your@email.com>					+#+  +:+	   +#+		  */
-/*												  +#+#+#+#+#+	+#+			  */
-/*	 Created: 2026/01/21 15:36:37 by username		   #+#	  #+#			  */
-/*	 Updated: 2026/01/21 16:22:20 by username		  ###	########.fr		  */
-/*																			  */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 17:11:37 by nyramana          #+#    #+#             */
+/*   Updated: 2026/01/28 17:11:38 by nyramana         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -20,7 +20,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	i = 0;
 	j = 0;
-	res = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	res = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
 	while (s1[i])
@@ -33,21 +33,22 @@ char	*ft_strjoin(const char *s1, const char *s2)
 }
 /*
 #include <stdio.h>
-int main() {
-    const char* mot1 = "Hello ";
-    const char* mot2 = "World!";
 
-    char* phrase = ft_strjoin(mot1, mot2);
+int	main(void) {
+	const char* mot1 = "Hello ";
+	const char* mot2 = "World!";
 
-    if (phrase != NULL) {
-        printf("Chaîne 1 : %s\n", mot1);
-        printf("Chaîne 2 : %s\n", mot2);
-        printf("Résultat : %s\n", phrase);
+	char* phrase = ft_strjoin(mot1, mot2);
 
-        // Libération de la mémoire
-        free(phrase);
-    }
+	if (phrase != NULL) {
+		printf("Chaîne 1 : %s\n", mot1);
+		printf("Chaîne 2 : %s\n", mot2);
+		printf("Résultat : %s\n", phrase);
 
-    return 0;
+		// Libération de la mémoire
+		free(phrase);
+	}
+
+	return (0);
 }
 */

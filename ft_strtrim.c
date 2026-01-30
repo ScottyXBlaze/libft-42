@@ -1,35 +1,16 @@
 /* ************************************************************************** */
-/*																			  */
-/*														  :::	   ::::::::   */
-/*	 ft_strtrim.c										:+:		 :+:	:+:   */
-/*													  +:+ +:+		  +:+	  */
-/*	 By: username <your@email.com>					+#+  +:+	   +#+		  */
-/*												  +#+#+#+#+#+	+#+			  */
-/*	 Created: 2026/01/23 10:48:25 by username		   #+#	  #+#			  */
-/*	 Updated: 2026/01/23 10:50:30 by username		  ###	########.fr		  */
-/*																			  */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 17:12:55 by nyramana          #+#    #+#             */
+/*   Updated: 2026/01/28 17:29:13 by nyramana         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	to_trim(const char *set, char c);
-static char	*new_str(const char *s1, size_t start, size_t end);
-
-char	*ft_strtrim(const char *s1, const char *set)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = ft_strlen(s1) - 1;
-	if (ft_strlen(s1) == 0)
-		return (ft_strdup(""));
-	while (to_trim(set, s1[i]))
-		i++;
-	while (to_trim(set, s1[j]))
-		j--;
-	return (new_str(s1, i, j - (i - 1)));
-}
 
 static char	*new_str(const char *s1, size_t start, size_t len)
 {
@@ -62,4 +43,20 @@ static int	to_trim(const char *set, char c)
 		i++;
 	}
 	return (0);
+}
+
+char	*ft_strtrim(const char *s1, const char *set)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
+	while (to_trim(set, s1[i]))
+		i++;
+	while (to_trim(set, s1[j]))
+		j--;
+	return (new_str(s1, i, j - (i - 1)));
 }

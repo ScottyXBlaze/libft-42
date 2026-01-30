@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 08:25:44 by username          #+#    #+#             */
-/*   Updated: 2026/01/21 08:29:27 by username         ###   ########.fr       */
+/*   Created: 2026/01/28 17:10:24 by nyramana          #+#    #+#             */
+/*   Updated: 2026/01/28 17:10:25 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*ptr;
 	unsigned char	t;
 
-	t = (unsigned char) c;
+	t = (unsigned char)c;
 	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)

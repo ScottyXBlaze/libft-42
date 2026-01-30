@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 08:26:14 by username          #+#    #+#             */
-/*   Updated: 2026/01/25 11:35:47 by nyramana         ###   ########.fr       */
+/*   Created: 2026/01/28 17:12:44 by nyramana          #+#    #+#             */
+/*   Updated: 2026/01/28 17:12:45 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int	i;
 
 	i = ft_strlen(s);
 	if (c == 0)

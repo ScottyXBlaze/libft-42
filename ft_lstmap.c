@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/26 12:58:21 by username          #+#    #+#             */
-/*   Updated: 2026/01/26 14:14:02 by username         ###   ########.fr       */
+/*   Created: 2026/01/28 17:10:03 by nyramana          #+#    #+#             */
+/*   Updated: 2026/01/28 17:27:51 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_lst = ft_lstnew(content);
 		if (!new_lst)
 		{
-			del(content);
 			ft_lstclear(&tmp, del);
 			return (NULL);
 		}
