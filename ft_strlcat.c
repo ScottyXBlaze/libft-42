@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: nyramana <nyramana@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:11:42 by nyramana          #+#    #+#             */
-/*   Updated: 2026/01/28 17:11:43 by nyramana         ###   ########.fr       */
+/*   Updated: 2026/01/30 14:46:45 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	src_len = ft_strlen(src);
 	j = dst_len;
 	i = 0;
+	if (n == 0 || n <= dst_len)
+		return (src_len + n);
 	if (dst_len < n - 1 && n > 0)
 	{
 		while (dst_len + i + 1 < n && src[i])
@@ -33,7 +35,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 		}
 		dst[j] = '\0';
 	}
-	if (n <= dst_len)
-		dst_len = n;
 	return (dst_len + src_len);
 }

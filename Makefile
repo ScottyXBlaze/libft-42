@@ -48,7 +48,7 @@ SRC	=	ft_isalpha.c \
 
 OBJS = $(SRC:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 AR = ar crs

@@ -3,29 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: nyramana <nyramana@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:11:20 by nyramana          #+#    #+#             */
-/*   Updated: 2026/01/28 17:11:21 by nyramana         ###   ########.fr       */
+/*   Updated: 2026/01/30 14:18:11 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
 char	*ft_strchr(const char *s, int c)
 {
 	unsigned int	i;
-	char			cc;
+	char			charc;
 
-	cc = (char)c;
+	charc = (char)c;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == cc)
+		if (s[i] == charc)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if (s[i] == cc)
+	if (s[i] == charc)
 		return ((char *)&s[i]);
 	return (NULL);
 }

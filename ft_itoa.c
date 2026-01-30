@@ -6,13 +6,13 @@
 /*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:09:12 by nyramana          #+#    #+#             */
-/*   Updated: 2026/01/28 17:25:56 by nyramana         ###   ########.fr       */
+/*   Updated: 2026/01/30 12:52:09 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*pre_conv(int len)
+static char	*malloc_char(int len)
 {
 	char	*ptr;
 
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	len = int_len(nbr);
-	result = pre_conv(len);
+	result = malloc_char(len);
 	if (!result)
 		return (NULL);
 	if (nbr < 0)

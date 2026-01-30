@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nyramana <nyramana@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: nyramana <nyramana@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 18:18:24 by nyramana          #+#    #+#             */
-/*   Updated: 2026/01/21 11:04:28 by username         ###   ########.fr       */
+/*   Updated: 2026/01/30 13:30:09 by nyramana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
