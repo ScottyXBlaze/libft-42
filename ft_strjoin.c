@@ -14,11 +14,14 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char	*res;
-	int		i;
-	int		j;
+	char *res;
+	int i;
+	int j;
 
-
+	if (!s1 || !s2)
+	{
+		return (NULL);
+	}
 	res = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!res)
 		return (NULL);

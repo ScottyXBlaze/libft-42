@@ -50,6 +50,11 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int	i;
 	int	j;
 
+    if (!s1 || !set)
+    {
+        return (NULL);
+    }
+    
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	if (ft_strlen(s1) == 0)
